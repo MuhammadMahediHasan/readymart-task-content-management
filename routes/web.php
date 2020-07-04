@@ -11,12 +11,18 @@
 |
 */
 Route::group(['middleware'=>'auth'],function(){
-	Route::get('/', function () {
-	    return view('backend.index');
+	Route::get('/backend', function () {
+	    return view('backend.dashboard');
 	});
-
-	});
+	Route::resource('/post','PostController');
+});
 // Auth::routes(['register' => false]);
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+//Frontend Routes
+Route::get('/', function () {
+    return view('frontend.index');
+});
+

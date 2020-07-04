@@ -1,9 +1,5 @@
-/*!
-    * Start Bootstrap - SB Admin v6.0.1 (https://startbootstrap.com/templates/sb-admin)
-    * Copyright 2013-2020 Start Bootstrap
-    * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-sb-admin/blob/master/LICENSE)
-    */
-    (function($) {
+
+(function($) {
     "use strict";
 
     // Add active state to sidbar nav links
@@ -20,3 +16,22 @@
         $("body").toggleClass("sb-sidenav-toggled");
     });
 })(jQuery);
+
+//Input Tag Hide Show in Post
+$('#video_or_post').change(function(){
+    if ($('#video_or_post').val() == 1) 
+    {
+        $('#video_link').show();
+        $('#image').hide();
+    }
+    else {
+        $('#image').show();
+        $('#video_link').hide();
+    }
+})
+
+$(document).ready(function(){
+    $('#video_link').show();
+    $('#image').hide();
+})
+
