@@ -45,7 +45,7 @@ class PostController extends Controller
         //Form Validation
         $validation = Validator::make($requested_data, $obj->validationRules($request->video_or_post));
         if ($validation->fails()) {
-            return back()->withErrors($validation)->withInput();
+            return back()->withErrors($validation)->withInput($request->all());
         }
 
         //URL Validation

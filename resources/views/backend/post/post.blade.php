@@ -38,8 +38,8 @@
                     <div class="form-group">
                         <label >Video/Post</label>
                         <select class="form-control" name="video_or_post" id="video_or_post" value="{{ old('video_or_post') }}">
-                            <option value="1">Video</option>
-                            <option value="2">Post</option>
+                            <option value="1" @if( old('video_or_post') == 1) selected="selected" @endif>Video</option>
+                            <option value="2" @if( old('video_or_post') == 2) selected="selected" @endif>Post</option>
                         </select>
                         <small class="form-text text-danger">{{ $errors->first('video_or_post') }}</small>
                     </div>
@@ -47,9 +47,9 @@
                 <div class="col">
                     <div class="form-group">
                         <label >Post will appear in</label>
-                        <select class="form-control" name="section" id="section" value="{{ old('section') }}">
-                            <option value="1">Section 1</option>
-                            <option value="2">Section 2</option>
+                        <select class="form-control" name="section" id="section">
+                            <option value="1" @if( old('section') == 1) selected="selected" @endif>Section 1</option>
+                            <option value="2" @if( old('section') == 2) selected="selected" @endif>Section 2</option>
                         </select>
                         <small class="form-text text-danger">{{ $errors->first('section') }}</small>
                     </div>

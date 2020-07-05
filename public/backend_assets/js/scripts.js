@@ -31,7 +31,14 @@ $('#video_or_post').change(function(){
 })
 
 $(document).ready(function(){
-    $('#video_link').show();
-    $('#image').hide();
+    if ($('#video_or_post').val() == 1) 
+    {
+        $('#video_link').show();
+        $('#image').hide();
+    }
+    else {
+        $('#image').show();
+        $('#video_link').hide();
+    }
 })
 
