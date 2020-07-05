@@ -7,8 +7,8 @@ body {
 
 .section-1 {
 	padding: 0px 18px 20px 15px;
-    border-right: 1px solid #ddd;
-    margin-top: 20px;
+  border-right: 1px solid #ddd;
+  margin-top: 20px;
 }
 
 .section-2 {
@@ -23,6 +23,10 @@ body {
 	padding: 0px 10px 0px 10px;
 }
 
+.section-1-lg .img-fluid{
+  height: 255px;
+}
+
 .section-1-sm{
 	padding: 0px 10px 10px 10px;
 }
@@ -31,17 +35,110 @@ footer {
 	margin-top: 20px;
 }
 
-.main_image {
+
+/*Section One*/
+
+.section-1-lg .main_image {
   position: relative;
-  /*display: inline-block;*/
 }
 
-.overlay_image {
+.section-1-sm .main_image {
+  position: relative;
+}
+
+.section-1-lg .main_image .overlay_image {
+  position: absolute;
+  bottom: 9%;
+  right: 0%;
+}
+
+.section-1-lg .main_image .overlay_image img {
+	width: 50px;
+}
+
+.section-1-sm .main_image .overlay_image {
+  position: absolute;
+  bottom: 34%;
+  right: 0%;
+}
+
+.section-1-sm .main_image .overlay_image img {
+  width: 20px;
+}
+
+.section-1-sm .main_image .img-fluid {
+  height: 90px;
+}
+/*Section Two*/
+
+.section-2-lg .main_image {
+  position: relative;
+}
+
+.section-2-sm .main_image {
+  position: relative;
+}
+
+.page_details_section .main_image {
+  position: relative;
+}
+
+.page_details_section .main_image .overlay_image {
   position: absolute;
   bottom: 0%;
   right: 0%;
 }
 
-.overlay_image img {
-	width: 50px;
+.page_details_section .main_image .overlay_image img {
+  width: 100px;
+}
+
+.section-2-lg .main_image .overlay_image {
+  position: absolute;
+  bottom: 10%;
+  right: 0%;
+}
+
+.section-2-lg .main_image .overlay_image img {
+  width: 50px;
+}
+
+.section-2-sm .main_image .overlay_image {
+  position: absolute;
+  bottom: 34%;
+  right: 0%;
+}
+
+.section-2-sm .main_image .overlay_image img {
+  width: 20px;
+}
+
+.section-2-sm .main_image .img-fluid {
+  height: 90px;
+}
+
+.img-fluid {
+  width: 100%
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #414141;
+    text-decoration: none;
+}
+
+.share_now {
+    list-style: none;
+    display: inline-flex;
+    float: right;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.share_now li {
+      margin-left: 10px;
 }

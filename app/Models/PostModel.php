@@ -8,11 +8,13 @@ class PostModel extends Model
 {
     protected $table = 'posts';
     protected $primaryKey = 'id';
-
     protected $fillable = ['title', 'description', 'video_or_post', 'section', 'status', 'file'];
 
 
-    public function validationRules($video_or_post = null) {
+    /**
+     * @param  int  $video_or_post
+     */
+     public function validationRules($video_or_post = null) {
     	return [
     		'title' => 'required|max:191',
     		'description' => 'required',

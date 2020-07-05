@@ -103,6 +103,7 @@
                             <th>Video/Post</th>
                             <th>Section</th>
                             <th>Status</th>
+                            <th>Image</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -114,6 +115,7 @@
                             <th>Video/Post</th>
                             <th>Section</th>
                             <th>Status</th>
+                            <th>Image</th>
                             <th>Action</th>
                         </tr>
                     </tfoot>
@@ -126,6 +128,13 @@
                             <td>{{ $value->video_or_post == 1 ? 'Video' : 'Post' }}</td>
                             <td>{{ $value->section == 1 ? 'Section 1' : 'Section 2' }}</td>
                             <td>{{ $value->status == 1 ? 'Publish' : 'Unpublish' }}</td>
+                            <td>
+                                @if($value->video_or_post == 1)
+                                <img src="https://img.youtube.com/vi/{{ $value->file }}/maxresdefault.jpg">
+                                @else
+                                <img src="{{ asset($value->file) }}">
+                                @endif
+                            </td>
                             <td style="display: inline-flex;">
                                 <form method="POST" action="/post/{{$value->id}}">
                                     {{ csrf_field() }}

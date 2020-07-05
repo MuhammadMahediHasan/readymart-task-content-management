@@ -8,13 +8,14 @@
         <script src="{{ asset('backend_assets/assets/demo/datatables-demo.js') }}"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
         <script src="{{ asset('backend_assets/js/scripts.js') }}"></script>
+        
         <script type="text/javascript">
         	if("{{ Session::has('toastr') }}"){
-			    toastr.success("{{ Session::get('toastr') }}");
-			    let session_clear = "{{ Session::forget('toastr')}}";
-			}
+		    toastr.success("{{ Session::get('toastr') }}");
+		    let session_clear = "{{ Session::forget('toastr')}}";
+		}
 
-			if("{{$errors->any()}}"){
-			    $('#modal').modal('show');
-			}
+		if("{{$errors->any()}}"){
+		    $('#modal').modal('show');
+		}
         </script>

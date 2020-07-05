@@ -10281,3 +10281,7 @@ body {
 .modal-footer {
     padding: 5px 10px 10px 5px;
 }
+
+.table img {
+  width: 100px;
+}
