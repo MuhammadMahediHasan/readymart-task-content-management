@@ -8,7 +8,7 @@
 
 4. Set Up Your Database Environment In .env Or copy('.env.example','.env').
 
-3. Import the sql database from root of the repository || php artisan migrate && php artisan db:seed.
+3. Import the sql database from root of the repository or php artisan migrate and php artisan db:seed.
 
 
 
