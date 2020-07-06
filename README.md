@@ -10,7 +10,8 @@
 
 3. Import the sql database from root of the repository or php artisan migrate and php artisan db:seed.
 
-
+Email : admin@gmail.com
+Password : 12345678
 
 ## Security Vulnerabilities
 
